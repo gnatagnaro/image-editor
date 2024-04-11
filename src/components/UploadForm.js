@@ -1,6 +1,7 @@
-import { useEffect, useState } from "react"
+import React, { useEffect, useState } from "react"
+import PopUp from "./PopUp"
 
-function UploadForm({form, handleFormChange, createNewFile, openImage, urlChange, heightChange, widthChange, fileChange}) {
+function UploadForm({form, handleFormChange, createNewFile, submitForm, urlChange, heightChange, widthChange, fileChange, message}) {
 
     const closeUploadForm = (e) => {
         handleFormChange('none')
@@ -26,13 +27,16 @@ function UploadForm({form, handleFormChange, createNewFile, openImage, urlChange
                         Или вставьте ссылку на изображение 
                         <input type="url" onChange={urlChange} placeholder="hhtps://example.com" id="url-input"/>
                     </label>
-                    <div className="form__buttons">
-                        <button onClick={openImage} className="form__button">
-                            Open image
-                        </button>
-                        <button onClick={closeUploadForm} className="form__button">
-                            Cancel
-                        </button>
+                    <div className="form__bottom-menu">
+                        <div className="form__buttons">
+                            <button onClick={submitForm} className="form__button">
+                                Open image
+                            </button>
+                            <button onClick={closeUploadForm} className="form__button">
+                                Cancel
+                            </button>
+                        </div>
+                        <PopUp message={message}></PopUp>
                     </div>
                 </form>
             </div>

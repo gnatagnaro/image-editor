@@ -7,12 +7,12 @@ export const useKeyPress = (keyTarget) => {
             if(key == '+') {
                 Number(canvas.style.height.slice(0,-2))
                 Number(canvas.style.width.slice(0,-2))
-                canvas.style.height = Number(canvas.style.height.slice(0,-2)) + 15 + 'px'
-                canvas.style.width = Number(canvas.style.width.slice(0,-2)) + 15 + 'px'
+                canvas.style.height = Number(canvas.style.height.slice(0,-2)*1.05)  + 'px'
+                canvas.style.width = Number(canvas.style.width.slice(0,-2)*1.05) + 'px'
             }
             if(key == '-') {
-                canvas.style.height = Number(canvas.style.height.slice(0,-2) - 15) + 'px'
-                canvas.style.width = Number(canvas.style.width.slice(0,-2) - 15) + 'px'
+                canvas.style.height = Number(canvas.style.height.slice(0,-2)*0.95) + 'px'
+                canvas.style.width = Number(canvas.style.width.slice(0,-2)*0.95) + 'px'
             }      
             if(key == 'j') {
                 console.log('ctrl')

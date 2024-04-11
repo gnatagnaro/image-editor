@@ -34,7 +34,7 @@ function Toolbar({ onChange }) {
                     <img src='/images/hand-drag.svg' className='toolbar__icon'/>
 				</li>
 				<li className='toolbar__tool' id='brush' onClick={selectTool}>
-                    <img className='toolbar__icon'/>
+                    <img src='/images/brush.svg' className='toolbar__icon'/>
 				</li>
 				<li className='toolbar__tool' id='select' onClick={selectTool}>
                     <img className='toolbar__icon'/>
